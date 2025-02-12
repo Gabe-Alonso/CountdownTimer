@@ -66,8 +66,6 @@ class TimerWorker(context: Context, parameters: WorkerParameters) :
             .setContentText(text)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .build()
-
-        // Post notification
         if (notificationManager.areNotificationsEnabled()) {
             notificationManager.notify(NOTIFICATION_ID, notification)
         }
